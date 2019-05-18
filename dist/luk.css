@@ -1,0 +1,526 @@
+@import url(themify-icons.css);
+[luk*="cr-bg"] {
+  background: #f8f8f9;
+}
+
+[luk*="cr-linha"] {
+  background: #e8eaec;
+}
+
+[luk*="cr-borda"] {
+  background: #dcdee2;
+}
+
+[luk*="cr-desativado"] {
+  background: #c5c8ce;
+}
+
+[luk*="cr-sub"] {
+  background: #808695;
+}
+
+[luk*="cr-conteudo"] {
+  background: #515a6e;
+  color: #ffffff;
+}
+
+[luk*="cr-titulo"] {
+  background: #17233d;
+  color: #ffffff;
+}
+
+[luk*="cr-erro"] {
+  background: #ed4014;
+  color: #ffffff;
+}
+
+[luk*="cr-alerta"] {
+  background: #ff9900;
+  color: #ffffff;
+}
+
+[luk*="cr-sucesso"] {
+  background: #19be6b;
+  color: #ffffff;
+}
+
+[luk*="cr-info"] {
+  background: #2db7f5;
+  color: #ffffff;
+}
+
+[luk*="cr-escuro"] {
+  background: #2b85e4;
+  color: #ffffff;
+}
+
+[luk*="cr-claro"] {
+  background: #5cadff;
+}
+
+[luk*="cr-p"] {
+  background: #2d8cf0;
+  color: #ffffff;
+}
+
+[luk*="cr-br"] {
+  background: #ffffff;
+  color: #515a6e;
+}
+
+[luk*="cr-block"] {
+  background: #00000052;
+  color: #f8f8f9;
+}
+
+[luk*="s-w-b"] {
+  width: 100%;
+}
+
+[luk*="s-w-m"] {
+  width: 50%;
+}
+
+[luk*="o-y-s"] {
+  overflow-y: scroll;
+}
+
+[luk*="cr-bd-br"] {
+  border: 1px solid #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: arial;
+  font-weight: lighter;
+}
+
+/************FLEXBOX*****************************/
+[luk*="flex"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+[luk*="f-l"] {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+[luk*="f-c"] {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+[luk*="ctr-p"] {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+[luk*="ctr-f"] {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+[luk*="f-entre"] {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+[luk*="btn"] {
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+  -webkit-animation-fill-mode: forwards;
+  /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+[luk*="blockPopups"] {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #17233d5e;
+  overflow: hidden;
+}
+
+.hide {
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomin;
+          animation-name: zoomin;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomout;
+          animation-name: zoomout;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+@-webkit-keyframes zoomin {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+@keyframes zoomin {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+@-webkit-keyframes zoomout {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+@keyframes zoomout {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+[luk*="popup-full"] {
+  width: 100%;
+  height: 100%;
+}
+
+[luk*="popup-full"] [luk*="titulo"] {
+  width: 100%;
+  min-height: 70px;
+  border-bottom: 1px solid #dcdee2;
+}
+
+[luk*="messagebox"] {
+  width: 60vh !important;
+  min-height: 200px !important;
+  top: 10vh;
+  border: 1px solid #dcdee2;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px #515a6e;
+          box-shadow: 0px 0px 5px #515a6e;
+}
+
+[luk*="messagebox"] [luk*="titulo"] {
+  margin-bottom: 20px;
+}
+
+[luk*="btn"]:hover {
+  -webkit-filter: saturate(50%);
+          filter: saturate(50%);
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+[luk*="no-hover"]:hover {
+  -webkit-filter: saturate(100%) !important;
+          filter: saturate(100%) !important;
+  -webkit-transform: scale(1, 1) !important;
+          transform: scale(1, 1) !important;
+}
+
+[luk~="borda"] {
+  border: 1px solid #dcdee2;
+}
+
+[luk~="b-borda"] {
+  border-bottom: 1px solid #dcdee2;
+}
+
+[luk~="t-borda"] {
+  border-top: 1px solid #dcdee2;
+}
+
+[luk~="l-borda"] {
+  border-left: 1px solid #dcdee2;
+}
+
+[luk~="r-borda"] {
+  border-right: 1px solid #dcdee2;
+}
+
+[luk~="n-borda"] {
+  border: none !important;
+}
+
+@media print {
+  [luk*="no-print"] {
+    display: none !important;
+    width: 0.1px !important;
+  }
+}
+
+.vermelho {
+  color: red;
+}
+
+[luk*=carta] {
+  width: 80%;
+  min-height: auto;
+  height: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin: 10px;
+  color: #515a6e;
+  border: 1px solid #e8eaec;
+  overflow-X: none;
+  padding: 20px;
+}
+
+[luk*=carta] [luk*=cabeca]:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -19px;
+  width: 103.1%;
+  padding-top: 20px;
+  margin-left: -1.5%;
+  background: #ffffff;
+  border-bottom: 1px solid #e8eaec;
+  margin-bottom: 10px;
+}
+
+[luk*=carta] h1, [luk*=carta] h2, [luk*=carta] h3, [luk*=carta] h4 {
+  font-weight: bold;
+  width: 95%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+h3 {
+  font-size: 12pt;
+}
+
+[luk*=no-hover]:hover {
+  -webkit-box-shadow: 0px 0px 0px #ffffff !important;
+          box-shadow: 0px 0px 0px #ffffff !important;
+}
+
+[luk*=carta]:hover {
+  -webkit-box-shadow: 0px 0px 8px #00000034;
+          box-shadow: 0px 0px 8px #00000034;
+}
+
+[luk*=carta] li {
+  margin: 10px;
+}
+
+[luk~=sombra] {
+  -webkit-box-shadow: 0px 0px 8px #00000034;
+          box-shadow: 0px 0px 8px #00000034;
+}
+
+[luk~=sombra-h]:hover {
+  -webkit-box-shadow: 0px 0px 8px #00000034;
+          box-shadow: 0px 0px 8px #00000034;
+}
+
+[luk*=i-1] {
+  padding: 5px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 5px;
+  border: 1px solid #dcdee2;
+}
+
+[luk*=i-1] span {
+  margin-right: 5px;
+  color: #808695;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+[luk*=i-1] input, [luk*=i-1] select {
+  padding: 5px;
+  border: none;
+  background: #ffffff;
+  color: #808695;
+  width: 70% !important;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-left: 1px solid #dcdee2;
+  margin-left: 10px;
+  padding-left: 10px;
+  outline: none;
+}
+
+l {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+}
+
+[luk*=titulo] {
+  font-weight: bold;
+  font-size: 13pt;
+}
+
+[luk*=zebra]:nth-child(even) {
+  background-color: #e7e7e7;
+}
+
+.slide-in-elliptic-top-fwd {
+  -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-4-25 13:39:52
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-in-elliptic-top-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-elliptic-top-fwd {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+
+.scale-out-center {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-4-25 13:42:13
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation scale-out-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=luk.css.map */

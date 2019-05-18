@@ -1,0 +1,434 @@
+@import url(themify-icons.css);
+$n-bg: #f8f8f9 ;
+$n-linha: #e8eaec;
+$n-borda: #dcdee2;
+$n-desativado:#c5c8ce;
+$n-sub:#808695;
+$n-conteudo:#515a6e;
+$n-titulo:#17233d;
+$s-erro:#ed4014;
+$s-alerta:#ff9900;
+$s-sucesso:#19be6b;
+$s-info:#2db7f5;
+$p-escuro:#2b85e4;
+$p-claro:#5cadff;
+$p:#2d8cf0;
+$branco:#ffffff;
+$block:#00000052;
+
+//////############FIM DAS VARIAVEIS DAS CORES###############//////////////////////////
+
+[luk*="cr-bg"]{background: $n-bg;}
+[luk*="cr-linha"]{background: $n-linha;}
+[luk*="cr-borda"]{background: $n-borda;}
+[luk*="cr-desativado"]{background: $n-desativado;}
+[luk*="cr-sub"]{background: $n-sub;}
+[luk*="cr-conteudo"]{background: $n-conteudo; color: $branco;}
+[luk*="cr-titulo"]{background: $n-titulo;  color: $branco;}
+[luk*="cr-erro"]{background: $s-erro; color: $branco;}
+[luk*="cr-alerta"]{background: $s-alerta;  color: $branco;}
+[luk*="cr-sucesso"]{background: $s-sucesso;  color: $branco;}
+[luk*="cr-info"]{background: $s-info;  color: $branco;}
+[luk*="cr-escuro"]{background: $p-escuro;  color: $branco;}
+[luk*="cr-claro"]{background: $p-claro;}
+[luk*="cr-p"]{background: $p;  color: $branco;}
+[luk*="cr-br"]{background: $branco;  color: $n-conteudo;}
+[luk*="cr-block"]{background: $block;  color: $n-bg;}
+[luk*="s-w-b"]{width: 100%;}
+[luk*="s-w-m"]{width: 50%;}
+[luk*="o-y-s"]{overflow-y: scroll;}
+[luk*="cr-bd-br"]{border: 1px solid $branco;}
+
+
+*{margin: 0; padding: 0; text-decoration: none; list-style: none; font-family: arial; font-weight: lighter;  }
+
+/************FLEXBOX*****************************////
+
+[luk*="flex"]{
+    display: flex;
+}
+
+[luk*="f-l"]{
+    flex-direction: row;  
+}
+
+[luk*="f-c"]{
+    flex-direction: column;
+   
+}
+
+[luk*="ctr-p"]{
+    justify-content: center;
+    align-content: center;
+}
+
+[luk*="ctr-f"]{
+    justify-self: center;
+    align-self: center;
+}
+
+
+[luk*="f-entre"]{
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+
+
+
+[luk*="btn"]{
+    padding: 10px 10px;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    filter: saturate(100%);
+    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+    transition: 0.5s;
+    
+   
+}
+
+[luk*="blockPopups"]{
+  //  transition: 1s;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #17233d5e;
+    overflow: hidden;
+    
+}
+.hide{
+    transform: scale(0,0);
+}
+
+.zoomIn{
+    animation-name: zoomin;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    
+
+}
+
+.zoomOut{
+    animation-name: zoomout;
+    animation-duration: 0.5s;
+}
+
+
+@keyframes zoomin {
+    0% {transform: scale(0,0);}
+    100% {transform: scale(1,1); animation-play-state: paused;}
+}
+
+
+@keyframes zoomout {
+    from {transform: scale(1,1);}
+    100% {transform: scale(0,0); animation-play-state: paused;}
+}
+
+
+
+[luk*="popup-full"]{
+    width: 100%;
+    height: 100%;
+    [luk*="titulo"]{
+        width: 100%;
+        min-height: 70px;
+        border-bottom: 1px solid $n-borda;
+    }
+}
+
+[luk*="messagebox"]{
+  //  position: fixed;
+    width: 60vh !important;
+    min-height: 200px !important;
+  //  left: 35%;
+    top:10vh;
+    border:1px solid $n-borda;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px $n-conteudo;
+    [luk*="titulo"]{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+[luk*="btn"]:hover{
+    
+    //  opacity: 0.8;
+      filter: saturate(50%);
+      transform: scale(1.1,1.1);
+}
+
+
+[luk*="no-hover"]:hover{
+    
+    //  opacity: 0.8;
+      filter: saturate(100%)  !important;
+      transform: scale(1,1) !important;
+}
+
+
+
+[luk~="borda"]{
+    
+    border: 1px solid $n-borda;
+}
+[luk~="b-borda"]{
+    
+    border-bottom: 1px solid $n-borda;
+}
+[luk~="t-borda"]{
+    
+    border-top: 1px solid $n-borda;
+}
+[luk~="l-borda"]{
+    
+    border-left: 1px solid $n-borda;
+}
+[luk~="r-borda"]{
+    
+    border-right: 1px solid $n-borda;
+}
+[luk~="n-borda"]{
+    
+    border: none !important;
+}
+
+
+
+@media print {
+    [luk*="no-print"]{
+    
+        display: none !important;
+        width: 0.1px !important;
+        
+    }
+}
+
+
+.vermelho{
+    color: red;
+}
+
+
+
+[luk*=carta]{
+   
+    width: 80%;
+    min-height: auto;
+    height: auto;
+    transition: 0.5s;
+    margin: 10px;
+    color: $n-conteudo;
+    border: 1px solid $n-linha;
+    overflow-X: none;
+
+    [luk*=cabeca]:first-child{
+        display: flex;
+        flex-direction: column;
+        margin-top: -19px;
+        width: 103.1%;
+        padding-top: 20px;
+        margin-left: -1.5%;
+        background: $branco;
+        border-bottom: 1px solid $n-linha;
+        margin-bottom: 10px;
+    }
+    h1, h2, h3, h4{
+        font-weight: bold;
+        width: 95%;
+        padding-left: 2%;
+        padding-right: 2%;
+      
+        
+
+    }
+    
+    padding: 20px;
+}
+
+h3{
+    font-size: 12pt;
+}
+
+
+[luk*=no-hover]:hover{
+    box-shadow: 0px 0px 0px #ffffff !important;
+}
+
+[luk*=carta]:hover{
+   box-shadow: 0px 0px 8px #00000034;
+  
+}
+
+[luk*=carta] li{
+    margin: 10px;
+}
+
+
+[luk~=sombra]{
+    box-shadow: 0px 0px 8px #00000034;
+}
+
+
+[luk~=sombra-h]:hover{
+ 
+    box-shadow: 0px 0px 8px #00000034;
+}
+
+
+
+[luk*=i-1]{
+    padding: 5px;
+    margin-bottom: 10px;
+    background: $branco;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid $n-borda;
+    span{
+        margin-right:5px;
+        color: $n-sub;
+        justify-self: center;
+        align-self: center;
+    }
+    input,select{
+        padding: 5px;
+        border: none;
+        background: $branco;
+        color: $n-sub;
+        width: 70% !important;
+        justify-self: center;
+        align-self: center;
+        border-left: 1px solid $n-borda;
+        margin-left: 10px;
+        padding-left: 10px;
+        outline: none;
+    }
+}
+
+
+l{
+    width: 30px;
+    height: 30px;
+    //background: #19be6b;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    text-align: center;
+}
+
+
+
+
+////CONTEUDOS////////////////
+[luk*=titulo]{
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+[luk*=zebra]:nth-child(even) {
+    background-color: #e7e7e7
+  }
+
+
+
+
+  .slide-in-elliptic-top-fwd {
+	-webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+  /* ----------------------------------------------
+ * Generated by Animista on 2019-4-25 13:39:52
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-elliptic-top-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+    0% {
+      -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+              transform: translateY(-600px) rotateX(-30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% 1400px;
+              transform-origin: 50% 1400px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-elliptic-top-fwd {
+    0% {
+      -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+              transform: translateY(-600px) rotateX(-30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% 1400px;
+              transform-origin: 50% 1400px;
+      opacity: 1;
+    }
+  }
+  
+
+
+  .scale-out-center {
+	-webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+
+  /* ----------------------------------------------
+ * Generated by Animista on 2019-4-25 13:42:13
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-out-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-out-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-out-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+  }
+  
